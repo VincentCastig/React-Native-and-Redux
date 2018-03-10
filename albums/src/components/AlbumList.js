@@ -11,10 +11,20 @@ class AlbumList extends Component {
             this.setState({ albums: response.data });
         });
     }
+    renderAlbumList() {
+        return this.state.albums.map((album, i) => {
+            return (
+                <Text key={i}>
+                    {album.title}
+                </Text>
+            );
+        });
+    }
+    
     render() {
         return (
             <View>
-                <Text>List</Text>
+                {this.renderAlbumList()}
             </View>
         );
     }
