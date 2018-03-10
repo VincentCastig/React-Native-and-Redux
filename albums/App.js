@@ -25,7 +25,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View>
-        <Header />
+        <Header headerText={'Albums'} />
         <View style={styles.container}>
           <Text style={styles.instructions}>
             To get started, edit App.js
