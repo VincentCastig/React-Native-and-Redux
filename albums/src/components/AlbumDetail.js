@@ -22,7 +22,7 @@ const AlbumList = ({ album }) => {
                 <Image style={styles.imageStyle}source={{ uri: image }} />
             </CardItem>
             <CardItem>
-                <Button />
+                <Button onPress={() => console.log(title)} />
             </CardItem>
         </Card>
     );
