@@ -4,7 +4,8 @@ import Card from './Card';
 import CardItem from './CardItem';
 
 const AlbumList = ({ album }) => {
-    const { title, artist, thumbnail_image } = album;
+    const { title, artist, thumbnail_image, image } = album;
+
     return (
         <Card>
             <CardItem>
@@ -16,10 +17,10 @@ const AlbumList = ({ album }) => {
                     <Text>{artist}</Text>
                 </View>
             </CardItem>
-            {/* <CardItem>
-                <Text>{props.album.title}</Text>
-            </CardItem>
             <CardItem>
+                <Image style={styles.imageStyle}source={{ uri: image }} />
+            </CardItem>
+            {/* <CardItem>
                 <Text>{props.album.title}</Text>
             </CardItem> */}
         </Card>
@@ -43,6 +44,11 @@ const styles = {
     thumbnailStyle: {
         width: 50, 
         height: 50
+    },
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: null
     }
 };
 
