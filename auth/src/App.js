@@ -1,13 +1,14 @@
 
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import firebase from 'firebase';
-import { Header } from './src/components/common';
+import { Header } from './components/common';
+import LoginForm from './components/LoginForm';
 
-type Props = {};
-export default class App extends Component<Props> {
-  componentWillMount(){
-    firebase.initializeApp ({
+class App extends Component {
+  
+  componentWillMount() {
+    firebase.initializeApp({
       apiKey: "AIzaSyBia2zvVaTUf9Qpl9sG3smcGc6dyjhM5Gs",
       authDomain: "udemyauth-31397.firebaseapp.com",
       databaseURL: "https://udemyauth-31397.firebaseio.com",
@@ -21,6 +22,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Header headerText='header' style={styles.welcome} />
+        <LoginForm />
       </View>
     );
   }
@@ -44,3 +46,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default App;
