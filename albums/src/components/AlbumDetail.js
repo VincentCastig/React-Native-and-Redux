@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import Card from './Card';
 import CardItem from './CardItem';
+import Button from './Button';
 
 const AlbumList = ({ album }) => {
     const { title, artist, thumbnail_image, image } = album;
@@ -20,9 +21,9 @@ const AlbumList = ({ album }) => {
             <CardItem>
                 <Image style={styles.imageStyle}source={{ uri: image }} />
             </CardItem>
-            {/* <CardItem>
-                <Text>{props.album.title}</Text>
-            </CardItem> */}
+            <CardItem>
+                <Button />
+            </CardItem>
         </Card>
     );
 };
