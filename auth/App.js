@@ -22,7 +22,7 @@ export default class App extends Component<Props>  {
   render() {
     return (
       <View>
-        <Header headerText='header' />
+        <Header headerText='Authentication' />
         <LoginForm />
       </View>
     );
