@@ -7,7 +7,7 @@ import LoginForm from './src/components/LoginForm';
 
 type Props = {};
 export default class App extends Component<Props>  {
-  state={ LoggedIn: false }
+  state={ LoggedIn: null }
 
   componentWillMount() {
     firebase.initializeApp({
@@ -30,7 +30,7 @@ export default class App extends Component<Props>  {
   renderContent() {
     switch (this.state.LoggedIn) {
       case true:
-        return <Button>Log Out</Button>;
+        return <Button onPress={() => firebase.auth().signOut()}>Log Out</Button>;
       case false:
         return <LoginForm />;
       default:
@@ -40,7 +40,7 @@ export default class App extends Component<Props>  {
 
   render() {
     return (
-      <View>
+      <View style={{ height: 111 }}>
         <Header headerText='Authentication' />
         {this.renderContent()}
       </View>
