@@ -24,14 +24,14 @@ class LoginForm extends Component {
         });
     }
 
-    onLoginFail(){
+    onLoginFail() {
         this.setState({
             error: 'Authentication Failed',
             loading: false
         });
      }
 
-    onLoginSucces(){
+    onLoginSucces() {
        this.setState({
            email: '',
            password: '',
@@ -39,15 +39,15 @@ class LoginForm extends Component {
        });
     }
     renderButton() {
-        if (this.state.loading){
+        if (this.state.loading) {
             return <Spinner />;
         }
         return (
                 <Button onPress={this.onButtonPress.bind(this)}>
                     Log in
                 </Button>
-        )
-    };
+        );
+    }
 
     render() {
         return (
