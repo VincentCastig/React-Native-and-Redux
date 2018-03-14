@@ -9,6 +9,7 @@ import { createStore } from 'redux';
 import firebase from 'firebase';
 import reducers from './src/reducers';
 import LoginForm from './src/components/LoginForm';
+import * as actions from './src/actions';
 
 
 class App extends Component {
