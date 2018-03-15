@@ -10,6 +10,7 @@ class EmployeeCreate extends Component {
                     <Input
                         label='Name'
                         placeholder='Joe'
+                        onChangeText
                     />
                 </CardItem>
 
