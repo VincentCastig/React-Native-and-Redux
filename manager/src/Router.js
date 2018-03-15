@@ -9,10 +9,10 @@ const RouterComponent = () => {
         <Router>
             <Scene key='root' hideNavBar>
                 <Scene key='auth'>
-                    <Scene key='login' component={LoginForm} title='Please Login' />
+                    <Scene key='login' component={LoginForm} title='Please Login' initial />
                 </Scene>
 
-                <Scene key='main' initial>
+                <Scene key='main'>
                     <Scene 
                         onRight={() => { Actions.employeeCreate(); }}
                         rightTitle='Add'
