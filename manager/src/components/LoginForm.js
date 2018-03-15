@@ -6,11 +6,11 @@ import { Card, CardItem, Input, Button, Spinner } from './common';
 
 
 class LoginForm extends Component {
-    onEmailChange(text){
-        this.props.emailChanged(text)
+    onEmailChange(text) {
+        this.props.emailChanged(text);
     }
-    onPasswordChange(text){
-        this.props.passwordChanged(text)
+    onPasswordChange(text) {
+        this.props.passwordChanged(text);
     }
     onButtonPress() {
         const { email, password } = this.props;

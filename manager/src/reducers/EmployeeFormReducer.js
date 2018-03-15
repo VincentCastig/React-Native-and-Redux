@@ -13,6 +13,7 @@ export default (state = INITIAL_STATE, action) => {
         case EMPLOYEE_UPDATE:
             // action.payload === { prop: 'name', value: 'jane' }
             //[action.payload.prop] is js6 key interperlation
+            console.log('ok in update');
             return { ...state, [action.payload.prop]: action.payload.value };
         default:
             return state;

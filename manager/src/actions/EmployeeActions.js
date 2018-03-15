@@ -1,4 +1,4 @@
-import EMPLOYEE_UPDATE from './Types';
+import { EMPLOYEE_UPDATE } from './Types';
 
 export const employeeUpdate = ({ prop, value }) => {
     return {
