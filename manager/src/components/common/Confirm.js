@@ -4,6 +4,8 @@ import { CardItem } from './CardItem';
 import { Button } from './Button';
 
 const Confirm = ({ children, visible, onAccept, onDecline }) => {
+    const { cardSectionStyle, textStyle, containerStyle } = styles;
+
     return (
         <Modal
             visible={visible}
@@ -11,9 +13,9 @@ const Confirm = ({ children, visible, onAccept, onDecline }) => {
             animationType="slide"
             onRequestClose={() => {}}
         >
-            <View>
-                <CardItem>
-                    <Text>{children}</Text>
+            <View style={containerStyle}>
+                <CardItem style={cardSectionStyle}>
+                    <Text style={textStyle}>{children}</Text>
                 </CardItem>
                 <CardItem>
                     <Button onPress={onAccept}>Yes</Button>
@@ -25,14 +27,20 @@ const Confirm = ({ children, visible, onAccept, onDecline }) => {
 };
 
 const styles = {
+    cardSectionStyle: {
+        justifyContent: 'center',
+    },
+    textStyle: {
+        flex: 1,
+        fontSize: 18,
+        textAlign: 'center',
+        lineHeight: 40
+    },
     containerStyle: {
-        borderBottomWidth: 1,
-        padding: 5,
-        backgroundColor: '#fff',
-        justifyContent: 'flex-start',
-        flexDirection: 'row',
-        borderColor: '#ddd',
-        position: 'relative'
+        backgroundColor: 'rgba(0, 0, 0, 0,75)',
+        position: 'relative',
+        flex: 1,
+        justifyContent: 'center'
     }
 };
 
